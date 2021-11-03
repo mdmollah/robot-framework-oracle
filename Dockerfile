@@ -33,7 +33,5 @@ RUN apk --no-cache upgrade \
 	cx_Oracle==$CX_ORACLE \
   && apk del --no-cache --update-cache .build-deps	
 
-COPY ./ojdbc8.jar /lib
-
 # Execute all robot tests
 CMD ["run-tests-in-virtual-screen.sh"]
